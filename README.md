@@ -1,30 +1,110 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/OqhBMGeK)
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/FXck2Aye)
-# Welcome to the course CSYE7374 - Design Patterns
-> Northeastern University, College of Engineering
+# Stock Market Trading Simulation
 
+## Student Information
+- **Name**: Rushabh Ukani 
+- **NUID**:  002922246
+- **Email**: ukani.r@northeastern.edu
+- **Course**: CSYE 7374 Design Patterns
+- **Assignment**: 1 - Stock API Implementation
 
-## Professor: Daniel Peters
+## Project Description
+This project implements a stock trading simulation system that demonstrates object-oriented design principles and real-world market behaviors. The implementation includes:
 
-### Requirements
-1. Eclipse or VS Code or IntelliJ.
+- Abstract `StockAPI` class with core stock functionality
+- `Tradable` interface defining trading operations
+- Two concrete implementations:
+  - `TechStock`: Simulates technology sector stocks with innovation metrics
+  - `BankStock`: Simulates banking sector stocks with interest rate sensitivity
 
-Note: If you are using Eclipse, please have git CLI installed on your system or GitHub Desktop to commit the code in this repository
+### Key Features
+1. Real-time market simulation
+2. Sector-specific performance metrics
+3. Market sentiment analysis
+4. Trading recommendations
+5. Volume and price tracking
+6. Day high/low monitoring
 
-### SetUp Instructions
-1. Please clone the repository on your local system
-2. For Eclipse Import the project as Existing Maven Project, For IntelliJ you can directlty open it using 'Get from VCS'.
-4. All code should be pushed to the main branch
-3. Ensure the GitHub actions are successful post push
+## How to Run
 
-Submissions will have deadlines, failed GitHub Actions would result in point deductions.
+### Prerequisites
+- Java JDK 11 or higher
+- Git
 
-### References
-1. Cloning a Repository: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
-2. Any GitHub Setup: Please refer to the Git & GitHub Fundamentals Repository shared to you by your respective TA and refer the README.md section
+### Build and Run Instructions
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd [repository-name]
+   ```
 
-Please reach out to your respective TA if you need any help in regards with submission/ GitHub
+2. Compile the Java files:
+   ```bash
+   javac edu/neu/csye7374/*.java
+   ```
 
-Author:
-- Yesha Joshi (joshi.ye@northeastern.edu)
+3. Run the program:
+   ```bash
+   java edu.neu.csye7374.Driver
+   ```
 
+## Sample Output
+```
+============Market Simulation Start===================
+
+📱 Simulating Meta stock during earnings season:
+Initial: Meta Platforms Inc[META] $480.00 | High: $480.00 Low: $480.00 | Vol: 0
+
+Market Update:
+Meta Platforms Inc[META] $485.50 | High: $485.50 Low: $480.00 | Vol: 5234
+Signal: BUY ⬆️
+Analysis: Strong positive momentum. Innovation driving growth 💡
+
+[... more trading updates ...]
+
+🏦 Simulating Goldman Sachs during Fed announcement:
+Initial: Goldman Sachs Group[GS] $385.00 | High: $385.00 Low: $385.00 | Vol: 0
+
+[... more trading updates ...]
+
+============Market Simulation End===================
+```
+
+## Class Structure
+1. **Tradable (Interface)**
+   - Defines core trading operations
+   - Methods for bid processing and metric calculation
+
+2. **StockAPI (Abstract Class)**
+   - Implements base stock functionality
+   - Manages price history and market data
+   - Provides common utilities for stock analysis
+
+3. **TechStock (Concrete Class)**
+   - Specialized for technology sector
+   - Includes innovation score metrics
+   - Volatile price movement simulation
+
+4. **BankStock (Concrete Class)**
+   - Specialized for banking sector
+   - Interest rate sensitivity
+   - Economic condition simulation
+
+## Design Patterns Used
+1. **Template Method Pattern**
+   - Base functionality in StockAPI
+   - Specialized behavior in concrete classes
+
+2. **Strategy Pattern**
+   - Different metric calculation strategies
+   - Sector-specific market analysis
+
+## Future Enhancements
+- Add more stock sectors (Healthcare, Energy, etc.)
+- Implement real-time data fetching
+- Add technical analysis indicators
+- Include market news sentiment analysis
+
+## References
+1. Stock Market Basics - []
+2. Java Design Patterns - []
+3. Financial Markets - []
